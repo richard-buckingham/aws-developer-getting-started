@@ -1,0 +1,13 @@
+Local url: http://localhost:3000/
+
+npm start
+
+
+Setup the EC2 instance:
+=======================
+sudo yum update
+
+curl --location https://rpm.nodesource.com/setup_6.x | sudo bash - 
+
+  sudo yum install -y nodejs
+
