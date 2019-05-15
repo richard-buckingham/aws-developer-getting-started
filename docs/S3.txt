@@ -1,0 +1,9 @@
+arn:aws:s3:::pizza-luvrs-richieb
+
+s3://pizza-luvrs-richieb/pizzas/best-pizza.png
+
+https://s3-ap-southeast-2.amazonaws.com/pizza-luvrs-richieb/pizzas/best-pizza.png
+https://s3-ap-southeast-2.amazonaws.com/pizza-luvrs-richieb/
+
+//s3-ap-southeast-2.amazonaws.com/pizza-luvrs-richieb/
+

@@ -11,28 +11,28 @@ var canvas = document.getElementById('pizza'),
   ctx = canvas.getContext('2d');
 attachHandlers();
 
-function loadImages () {
+function loadImages() {
   $.each(toppings, function (key, val) {
     var img = new Image();
     img.setAttribute('crossOrigin', 'anonymous');
-    img.src = '/assets/toppings/' + val.image;
+    img.src = '//s3-ap-southeast-2.amazonaws.com/pizza-luvrs-richieb/toppings/' + val.image;
     val.img = img;
   });
 }
 
-function attachHandlers () {
+function attachHandlers() {
   $('.topping').click(function () {
     $(this).toggleClass('added');
     addTopping(this.id);
   });
 }
 
-function addTopping (id) {
+function addTopping(id) {
   toppings[id].added = !toppings[id].added;
   redrawPizza();
 }
 
-function redrawPizza () {
+function redrawPizza() {
   ctx.clearRect(0, 0, 400, 400);
   $.each(toppings, function () {
     if (this.added) {
@@ -41,11 +41,11 @@ function redrawPizza () {
   });
 }
 
-function getPizzaImage () {
+function getPizzaImage() {
   return canvas.toDataURL("image/png");
 }
 
-function sendPizza () {
+function sendPizza() {
   var topps = [];
 
   $.map(toppings, function (topping) {
